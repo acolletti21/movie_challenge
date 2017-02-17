@@ -10,21 +10,30 @@ class MovieView
       puts event[:title]
       puts event[:rating]
       puts event[:run_time]
+      puts 
       count += 1
     end
   end
 
-  def show_movie_times
-    puts "enter the number of the move you'd like to see:"
-  #   user_choice = gets.chomp
+  # def show_movie_times
+  #   puts "enter the number of the move you'd like to see:"
+  #   # user_choice = gets.chomp
   #   current_title = @movies_collection["movie"]["title"]
   #     @movies_collection.each do |movie|
   #       if movie["title"] == current_title
   #         puts movie + movie.time
   #       end
   #     end
-  end
+  # end
 
+
+    def show_movie_times
+      puts "enter the number of the move you'd like to see:"
+      user_choice = gets.chomp.to_i
+      @movie = Movie.new
+      current_title_times = @movie.gen_schedule[user_choice][:run_time]
+      p current_title_times
+    end
 end
 
 

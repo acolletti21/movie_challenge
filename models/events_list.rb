@@ -33,7 +33,7 @@ class Events_List
   end
 
   def check_time_left
-    min_left = ((@close_time - @open_time) / 60) - 15
+    min_left = ((@close_time - @open_time)) - (15 * 60)
   end
 
 end

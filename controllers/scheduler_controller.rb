@@ -32,7 +32,7 @@ class SchedulerController
       # if user_choice == "all"
       #   movie_view.show_all_movies
       # end
-      
+
       if user_choice == "all"
         all_movies = MovieView.new
         all_movies.show_all_movies
@@ -40,6 +40,9 @@ class SchedulerController
 
       if user_choice == 'end'
         exit_program 
+      else 
+        movie_view.show_movie_times
+        # user_choice = gets.chomp
       end
     end    
   end

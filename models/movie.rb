@@ -40,7 +40,6 @@ class Movie
 
     event_list = Events_List.new
     time_left = event_list.check_time_left
-
     closing = event_list.close_time
     time_left = event_list.check_time_left
 
@@ -54,7 +53,7 @@ class Movie
 
         starting = opening
         ending_time = opening + movie.expanded_time
-        
+
         start_times << starting.strftime("%I:%M %p")
         end_times << ending_time.strftime("%I:%M %p")
 
